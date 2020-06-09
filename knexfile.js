@@ -2,8 +2,9 @@
 
 module.exports = {
   test: {
-    client: 'postgresql',
+    client: 'pg',
     connection: {
+      host: 'localhost',
       database: 'postgres',
       user:     'postgres',
       password: '123456'
