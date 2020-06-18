@@ -1,6 +1,10 @@
 module.exports = app => {
-  const save = async (account) => {
+  const save = (account) => {
     return app.db('accounts').insert(account, '*')
   }
-  return { save }
+
+  const findAll = () => {
+    return app.db('accounts')
+  }
+  return { save, findAll }
 }

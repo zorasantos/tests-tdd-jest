@@ -3,5 +3,10 @@ module.exports = (app) => {
     app.services.account.save(req.body)
       .then(result => res.status(200).json(result))
   }
-  return { createAccount }
+
+  const getAll = (req, res) => {
+    app.services.account.findAll()
+      .then(result => res.status(200).json(result))
+  }
+  return { createAccount, getAll }
 }
